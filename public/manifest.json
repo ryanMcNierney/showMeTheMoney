@@ -11,6 +11,12 @@
     "48": "images/money48.png",
     "128": "images/money128.png"
   },
+  "background": {
+    "scripts": [
+      "app/background.js"
+    ],
+    "persistent": false
+  },
   "page_action": {
     "default_popup": "index.html",
     "default_icon": {
