@@ -1,15 +1,23 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
+  "name": "smtm-test",
+  "version": "2.1",
+  "description": "Highlights sponsored content",
+  "permissions": [
+    "activeTab",
+    "declarativeContent"
   ],
-  "start_url": "./index.html",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "icons": {
+    "16": "images/money16.png",
+    "48": "images/money48.png",
+    "128": "images/money128.png"
+  },
+  "page_action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "images/money16.png",
+      "48": "images/money48.png",
+      "128": "images/money128.png"
+    }
+  },
+  "manifest_version": 2
 }
