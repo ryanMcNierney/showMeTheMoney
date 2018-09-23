@@ -3,6 +3,5 @@ body {
   padding: 0;
   font-family: sans-serif;
   min-width: 360px;
-  min-height: 500px;
-  background: green;
+  background: #F7F7F7 !important;
 }
