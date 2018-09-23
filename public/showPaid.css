@@ -1,5 +1,12 @@
 .smtm-sponsored {
-  border: 10px solid black;
+  border: 15px solid black;
   border-radius: 25px;
   background-color: rgba(0,0,0,0.5);
+}
+
+.thirdPartySponsorLink {
+  border: 15px solid black;
+  border-radius: 25px;
+  background-color: rgba(0,0,0,0.5);
+  height: 215px;
 }
