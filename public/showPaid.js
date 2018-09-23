@@ -1,16 +1,17 @@
-let sponsored = document.getElementsByClassName('s-result-item celwidget  AdHolder')
-// .slot__ad = top ad slopt
+// wrap top sponsored & content sponsored
+const wrapSponsored = () => {
+  const sponsored = document.getElementsByClassName('s-result-item celwidget  AdHolder')
+  const topSponsored = document.getElementsByClassName('slot__ad')
+  const newArr = [...sponsored, ...topSponsored]
 
-const newArr = [...sponsored]
+  newArr.forEach(element => {
+    const divToWrap = element.firstChild
+    const wrapper = document.createElement('div')
 
-newArr.forEach(element => {
-  const divToWrap = element.firstChild
+    wrapper.setAttribute('class', 'smtm-sponsored')
+    divToWrap.parentNode.insertBefore(wrapper, divToWrap)
+    wrapper.appendChild(divToWrap)
+  })
+}
 
-  const wrapper = document.createElement('div')
-  wrapper.setAttribute('class', 'smtm-sponsored')
-
-  divToWrap.parentNode.insertBefore(wrapper, divToWrap)
-
-  wrapper.appendChild(divToWrap)
-
-})
+wrapSponsored()
