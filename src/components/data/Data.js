@@ -24,10 +24,12 @@ class Data extends Component {
   }
 
   render() {
+    const percentage = this.state.data * 100
+    const pctClean = Number.parseFloat(percentage).toFixed(2)
     return (
       <div id="data">
         <h3>Data goes here</h3>
-        <p>Percentage: {this.state.data}</p>
+        <p>Percentage: {pctClean}%</p>
       </div>
     )
   }
