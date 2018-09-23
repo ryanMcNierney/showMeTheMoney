@@ -4,7 +4,9 @@
   "description": "Highlights sponsored content",
   "permissions": [
     "activeTab",
-    "declarativeContent"
+    "declarativeContent",
+    "storage",
+    "tabs"
   ],
   "icons": {
     "16": "images/money16.png",

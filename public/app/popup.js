@@ -12,4 +12,4 @@ displaySponsored.onclick = function () {
     )
   })
 }
-4
+
