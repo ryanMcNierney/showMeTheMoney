@@ -15,3 +15,45 @@ const wrapSponsored = () => {
 }
 
 wrapSponsored()
+
+// percentage functions
+const getSearchArea = () => {
+  const searchResults = document.getElementById('rightResultsATF')
+  const w = searchResults.clientWidth
+  const h = searchResults.clientHeight
+  return w * h
+}
+
+const getSponsoredArea = () => {
+  const sponsored = document.getElementsByClassName('smtm-sponsored')
+  const sponsoredArr = [...sponsored]
+  let sponsoredArea = 0;
+
+  sponsoredArr.map(element => {
+    const w = element.clientWidth
+    const h = element.clientHeight
+    sponsoredArea += w * h
+  })
+
+  return sponsoredArea
+}
+
+const getPercentage = () => {
+  const searchArea = getSearchArea()
+  const sponsoredArea = getSponsoredArea()
+
+  return sponsoredArea / searchArea
+}
+
+const setToStorage = () => {
+  const sponsored = getPercentage()
+  chrome.storage.sync.set({ percentage: sponsored }, function () {
+    console.log('Value is set to ' + sponsored);
+  });
+}
+
+setToStorage()
+
+chrome.runtime.sendMessage(chrome.runtime.id, { target: 'app', type: 'setMessage', body: getPercentage() });
+
+
