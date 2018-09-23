@@ -1,3 +1,5 @@
 .smtm-sponsored {
-  background-color: red;
+  border: 10px solid black;
+  border-radius: 25px;
+  background-color: rgba(0,0,0,0.5);
 }
