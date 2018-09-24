@@ -13,3 +13,15 @@ displaySponsored.onclick = function () {
   })
 }
 
+const removeSponsored = document.getElementById('remove-button')
+
+removeSponsored.onclick = function () {
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    chrome.tabs.executeScript(
+      tabs[0].id,
+      { file: 'removePaid.js' }
+    )
+  })
+}
+
+
