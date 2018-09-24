@@ -17,6 +17,7 @@ class Data extends Component {
 
   componentDidMount() {
     chrome.runtime.onMessage.addListener(this.handleMessage)
+    this.props.removeButton()
   }
 
   handleMessage(msg) {
@@ -41,9 +42,6 @@ class Data extends Component {
           <br></br>
           <p id="data-true">% True Search Results</p>
           <Progress percent={100 - pctClean} />
-        </div>
-        <div id="remove-button">
-          <Button type="danger" block id="remove-button">Remove Sponsored Posts</Button>
         </div>
       </div>
     )

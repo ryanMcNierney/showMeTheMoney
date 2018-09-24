@@ -4,8 +4,11 @@ const removeSponsored = () => {
   const newArr = [...smtmSponsored]
 
   newArr.forEach(element => {
-    element.setAttribute('style', 'display: none;')
+    element.style.display = 'none'
   })
+
+  const thirdPartyLink = document.getElementsByClassName('thirdPartySponsorLink')
+  thirdPartyLink[0].style.display = 'none'
 }
 
 removeSponsored()
