@@ -31,6 +31,8 @@ class Data extends Component {
   render() {
     const percentage = this.state.data * 100
     const pctClean = Number.parseFloat(percentage).toFixed(2)
+    const realPct = 100 - pctClean
+    const realClean = Number.parseFloat(realPct).toFixed(2)
     return (
       <div id="data">
         <div id="data-title">
@@ -41,7 +43,7 @@ class Data extends Component {
           <Progress percent={pctClean} />
           <br></br>
           <p id="data-true">% True Search Results</p>
-          <Progress percent={100 - pctClean} />
+          <Progress percent={realClean} />
         </div>
       </div>
     )
