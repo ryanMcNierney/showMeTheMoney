@@ -3,7 +3,7 @@ import './Data.css'
 /*global chrome*/
 
 //antd
-import { Progress } from 'antd'
+import { Progress, Button } from 'antd'
 
 class Data extends Component {
   constructor() {
@@ -41,6 +41,9 @@ class Data extends Component {
           <br></br>
           <p id="data-true">% True Search Results</p>
           <Progress percent={100 - pctClean} />
+        </div>
+        <div id="remove-button">
+          <Button type="danger" block id="remove-button">Remove Sponsored Posts</Button>
         </div>
       </div>
     )
