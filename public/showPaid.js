@@ -2,7 +2,8 @@
 const wrapSponsored = () => {
   const sponsored = document.getElementsByClassName('s-result-item celwidget  AdHolder')
   const topSponsored = document.getElementsByClassName('slot__ad')
-  const newArr = [...sponsored, ...topSponsored]
+  const amazonBrand = document.getElementsByClassName('s-result-item  celwidget acs-private-brands-container-background-single-image ')
+  const newArr = [...sponsored, ...topSponsored, ...amazonBrand]
 
   newArr.forEach(element => {
     const divToWrap = element.firstChild
