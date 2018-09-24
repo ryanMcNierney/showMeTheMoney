@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import './DisplaySponsored.css'
 import Data from '../data/Data'
 
+//antd
+import { Button } from 'antd'
+
 class DisplaySponsored extends Component {
   constructor() {
     super()
@@ -22,8 +25,9 @@ class DisplaySponsored extends Component {
     const { clicked } = this.state
     return (
       <div id="display-sponsored">
-        <button type="button" id="display-button" onClick={this.handleClick}>Click</button>
-        <h4>Display Sponsored Content</h4>
+        <div id="display-button">
+          <Button block id="display-button" onClick={this.handleClick}>Show Sponsored Posts</Button>
+        </div>
         {
           (clicked === true) ? <Data /> : null
         }

@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
+import './Data.css'
 /*global chrome*/
+
+//antd
+import { Progress } from 'antd'
 
 class Data extends Component {
   constructor() {
@@ -28,8 +32,16 @@ class Data extends Component {
     const pctClean = Number.parseFloat(percentage).toFixed(2)
     return (
       <div id="data">
-        <h3>Data goes here</h3>
-        <p>Percentage: {pctClean}%</p>
+        <div id="data-title">
+          <h3>Search Results Detail</h3>
+        </div>
+        <div id="data-bar">
+          <p>% Sponsored Content</p>
+          <Progress percent={pctClean} />
+          <br></br>
+          <p id="data-true">% True Search Results</p>
+          <Progress percent={100 - pctClean} />
+        </div>
       </div>
     )
   }

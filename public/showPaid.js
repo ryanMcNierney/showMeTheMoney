@@ -45,15 +45,6 @@ const getPercentage = () => {
   return sponsoredArea / searchArea
 }
 
-const setToStorage = () => {
-  const sponsored = getPercentage()
-  chrome.storage.sync.set({ percentage: sponsored }, function () {
-    console.log('Value is set to ' + sponsored);
-  });
-}
-
-setToStorage()
-
 chrome.runtime.sendMessage(chrome.runtime.id, { target: 'app', type: 'setMessage', body: getPercentage() });
 
 
