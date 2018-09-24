@@ -3,7 +3,7 @@ import './Data.css'
 /*global chrome*/
 
 //antd
-import { Progress } from 'antd'
+import { Progress, Button } from 'antd'
 
 class Data extends Component {
   constructor() {
@@ -17,6 +17,7 @@ class Data extends Component {
 
   componentDidMount() {
     chrome.runtime.onMessage.addListener(this.handleMessage)
+    this.props.removeButton()
   }
 
   handleMessage(msg) {
